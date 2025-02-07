@@ -1,4 +1,4 @@
-site_name: Jonathan Chun's Blog
+site_name: "@jonchun"
 site_url: https://jonchun.github.io/
 theme:
   name: material
@@ -20,6 +20,7 @@ theme:
   - navigation.tracking
   - toc.follow
   - content.code.copy
+  - content.code.annotate
 
   palette:
   - media: "(prefers-color-scheme: light)"
@@ -44,7 +45,7 @@ plugins:
 - rss:
     match_path: blog/posts/.* 
     date_from_meta:
-      as_creation: date
+      created: date
     categories:
       - categories
       - tags

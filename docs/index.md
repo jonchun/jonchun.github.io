@@ -1,17 +1,29 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+I'm Jonathan Chun, a technology leader driven by the mission of empowering development teams to build better software. Here, I share insights from my journey of leading technical initiatives and transforming developer experiences.
 
-## Commands
+## My Philosophy
+I get excited about elegant engineering solutions, but what really drives me is seeing technology solve meaningful problems. I've spent years building systems, and I've learned that the best solutions often come from balancing solid engineering principles with practical innovation.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+I'm particularly passionate about the future of AI - not just as a buzzword, but as a transformative force that's opening up new possibilities in how we approach complex challenges. Whether it's designing scalable architectures or exploring how AI can enhance our systems, I love diving deep into problems and emerging with solutions that actually work.
 
-## Project layout
+Through my writing, I share real experiences and insights from the trenches - the successes, the failures, and everything I've learned along the way. I believe we're living in one of the most exciting times in technology, and I want to be part of shaping what comes next.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Latest Insights
+
+Find my recent thoughts and experiences in the [Blog](/blog/) section, where I explore technical challenges and share solutions that have worked for my teams.
+
+
+## Topics
+- The future of AI
+- Technical Deep Dives
+- System Architecture & Scalability
+- Developer Tools & Productivity
+- Engineering Leadership 
+- Best Practices & Patterns
+
+## Social
+
+- [GitHub](https://github.com/jonchun)
+
+Whether you're leading a technical team, building developer tools, or interested in system design, I'd love to exchange ideas and experiences. 
