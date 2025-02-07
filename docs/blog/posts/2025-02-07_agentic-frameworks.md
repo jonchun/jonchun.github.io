@@ -291,3 +291,17 @@ From an engineering perspective, the frameworks abstract away much of the boiler
 The end result is a powerful abstraction for building AI systems that can plan and execute complex tasks. Rather than treating AI as a simple text generation service, agent frameworks enable the development of autonomous systems that can reason about goals, formulate plans, and reliably execute against them. This represents the natural evolution of AI system architecture -- from simple prompt-completion patterns to robust, production-ready frameworks for building reliable AI agents.
 
 These frameworks provide the architectural foundation necessary for the next generation of AI systems -- ones that don't just respond to prompts, but proactively reason, plan, and execute with the reliability required by real-world applications.
+
+---
+
+## What Framework is Best?
+I think "best" always depends on what exactly you're looking to achieve. However, here is a list of some of the more popular and/or promising projects.
+- https://ai.pydantic.dev/
+- https://github.com/BrainBlend-AI/atomic-agents
+- https://github.com/microsoft/autogen/
+- https://www.langchain.com/langgraph
+- https://www.crewai.com/
+- https://github.com/kyegomez/swarms
+
+I am the author of agenty which was used in the examples above. You can find my project here:
+- https://github.com/jonchun/agenty
