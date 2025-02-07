@@ -38,7 +38,7 @@ This is where agents come into play. They are the secret sauce that turns a raw 
 The result? An AI that feels less like a fancy autocomplete and more like a genuine assistant -- one that understands your intent, remembers your context, and can actually help you accomplish real-world tasks. It's not just about answering questions or predicting the next output anymore. It's about creating an intelligent system that can reason, plan, and execute -- bringing us closer to the dream of a true AI companion.
 
 ## What Are Agentic Frameworks?
-Agentic frameworks are the structured systems and architectures that enable AI agents to operate intelligently, flexibly, and efficiently. These frameworks provide the necessary infrastructure for managing conversations, integrating tools, handling memory, and executing tasks autonomously. Think of them as the backbone that transforms a basic AI model into a capable, adaptive assistant.
+Agentic frameworks (or Agent frameworks) are the structured systems and architectures that enable AI agents to operate intelligently, flexibly, and efficiently. These frameworks provide the necessary infrastructure for managing conversations, integrating tools, handling memory, and executing tasks autonomously. Think of them as the backbone that transforms a basic AI model into a capable, adaptive assistant.
 
 At their core, agentic frameworks define how an AI agent:
 
@@ -284,7 +284,7 @@ print(weather_agent.run("What is the weather like?")) # (2)!
 ---
 
 ## Why Agentic Frameworks?
-AI agent frameworks represent a significant architectural leap beyond raw LLM integration. While basic LLM calls serve well for text generation, agent frameworks provide the components for building complex AI systems through robust state management, memory persistence, and tool integration capabilities.
+Agentic frameworks represent a significant architectural leap beyond raw LLM integration. While basic LLM calls serve well for text generation, agent frameworks provide the components for building complex AI systems through robust state management, memory persistence, and tool integration capabilities.
 
 From an engineering perspective, the frameworks abstract away much of the boilerplate required for a sophisticated AI. Rather than repeatedly implementing context management, tool integration, and error handling patterns, developers can leverage pre-built implementations and components. This dramatically reduces technical debt while improving system reliability.
 
