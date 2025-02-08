@@ -3,7 +3,13 @@ date:
     created: 2025-02-07
 readtime: 30
 links:
-  - "Github: jonchun/agenty": https://github.com/jonchun/agenty
+  - "agenty": https://github.com/jonchun/agenty
+  - "atomic-agents": https://github.com/BrainBlend-AI/atomic-agents
+  - "autogen": https://github.com/microsoft/autogen/
+  - "langgraph": https://www.langchain.com/langgraph
+  - "crewai": https://www.crewai.com/
+  - "swarms": https://github.com/kyegomez/swarms
+
 ---
 # Why use an Agentic Framework?
 
@@ -297,11 +303,11 @@ These frameworks provide the architectural foundation necessary for the next gen
 ## What Framework is Best?
 I think "best" always depends on what exactly you're looking to achieve. However, here is a list of some of the more popular and/or promising projects.
 
-- https://ai.pydantic.dev/
-- https://github.com/BrainBlend-AI/atomic-agents
-- https://github.com/microsoft/autogen/
-- https://www.langchain.com/langgraph
-- https://www.crewai.com/
-- https://github.com/kyegomez/swarms
+- [https://ai.pydantic.dev/](https://ai.pydantic.dev/)
+- [https://github.com/BrainBlend-AI/atomic-agents](https://github.com/BrainBlend-AI/atomic-agents)
+- [https://github.com/microsoft/autogen/](https://github.com/microsoft/autogen/)
+- [https://www.langchain.com/langgraph](https://www.langchain.com/langgraph)
+- [https://www.crewai.com/](https://www.crewai.com/)
+- [https://github.com/kyegomez/swarms](https://github.com/kyegomez/swarms)
 
-I am the author of agenty which was used in the examples above. You can find my project here: https://github.com/jonchun/agenty
+I am the author of agenty which was used in the examples above. You can find my project here: [agenty](https://github.com/jonchun/agenty)
