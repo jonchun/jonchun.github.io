@@ -296,6 +296,7 @@ These frameworks provide the architectural foundation necessary for the next gen
 
 ## What Framework is Best?
 I think "best" always depends on what exactly you're looking to achieve. However, here is a list of some of the more popular and/or promising projects.
+
 - https://ai.pydantic.dev/
 - https://github.com/BrainBlend-AI/atomic-agents
 - https://github.com/microsoft/autogen/
@@ -303,5 +304,4 @@ I think "best" always depends on what exactly you're looking to achieve. However
 - https://www.crewai.com/
 - https://github.com/kyegomez/swarms
 
-I am the author of agenty which was used in the examples above. You can find my project here:
-- https://github.com/jonchun/agenty
+I am the author of agenty which was used in the examples above. You can find my project here: https://github.com/jonchun/agenty
