@@ -145,11 +145,55 @@ def get_price(amount: float, discount: float = 0.0) -> float:
 
 These simple annotations immediately tell other developers (and your future self) exactly what kind of data each function expects and returns.
 
+### Optional
+
+It's an extremely frequent occurrence to have `None` be a valid value. This was historically expressed with `Optional` from the typing module. While you might still see this in many codebases, modern Python (3.10+) provides a more concise syntax using the pipe operator:
+
+```python
+from typing import Optional
+
+# Traditional way
+def get_user(user_id: Optional[int]) -> Optional[dict]:
+    if user_id is None:
+        return None
+    return {"id": user_id, "name": "John"}
+
+# Modern way (Python 3.10+)
+def get_user(user_id: int | None) -> dict | None:
+    if user_id is None:
+        return None
+    return {"id": user_id, "name": "John"}
+```
+
+`Optional[T]` is actually just shorthand for `Union[T, None]`, and both are now more elegantly expressed using the `|` syntax.
+
+This pattern is particularly useful when:
+
+-   Dealing with database queries that might not find a record
+-   Working with API responses that could be missing data
+-   Handling user input that might be empty
+-   Processing optional configuration values
+
+!!!Note
+
+    Remember that `Optional` and `| None` don't mean the parameter is optional in the function call - it means the parameter can be `None`.
+
+    For optional parameters, you still need to use default values:
+    ```python
+    # Optional parameter with default value
+    def greet(name: str | None = None) -> str:
+        if name is None:
+            return "Hello, stranger!"
+        return f"Hello, {name}!"
+    ```
+
 ### Collections
 
 When working with collections, you start to see the real power in type hints. They allow you to specify not just the container type, but also what goes inside it:
 
 ```python
+from typing import Optional
+
 def process_orders(orders: list[dict[str, float]]) -> float:
     return sum(order['amount'] for order in orders)
 
@@ -168,23 +212,38 @@ The beauty of collection type hints is that they create a contract -- they tell 
 
     The above type-hints only work in Python 3.9+ (Released in 2020). You may run into type hints in the wild that looks like `from typing import Dict`. This is legacy syntax from before [PEP 585](https://peps.python.org/pep-0585/).
 
-### Union and Any
+### Unions
 
-Sometimes you need more flexibility in your type hints. That's where `Union` and `Any` come in:
+When working with types, you'll often encounter situations where a value could be one of several types. This is where `Union` types come in handy.
 
 ```python
-from typing import Union, Any
+from typing import Union
 
-def process_identifier(id: Union[int, str]) -> str:
+# Python 3.10+ syntax
+def process_identifier(id: int | str) -> str:  # (1)!
     # Can handle both numeric IDs and string IDs
     return str(id).upper()
+
+# Pre-3.10 syntax
+def process_identifier_old(id: Union[int, str]) -> str:
+    return str(id).upper()
+```
+
+1. [PEP604](https://peps.python.org/pep-0604/) introduced a convenient syntax to declare Union types.
+
+### Any
+
+Sometimes you need more flexibility in your type hints. That's where `Any` come in:
+
+```python
+from typing import Any
 
 def store_metadata(key: str, value: Any) -> None:
     # Can store any type of value
     database.set(key, value)
 ```
 
-`Union` is perfect when a function can handle multiple specific types, while `Any` should be used sparingly -- it's essentially telling type checkers "don't check this at all." Think of `Any` as an escape hatch when you truly need complete flexibility.
+`Any` should be used sparingly -- it's essentially telling type checkers "don't check this at all." Think of `Any` as an escape hatch when you truly need complete flexibility.
 
 ## Advanced Uses
 
