@@ -3,20 +3,21 @@ date:
     created: 2025-02-07
 readtime: 30
 links:
-  - "agenty": https://github.com/jonchun/agenty
-  - "atomic-agents": https://github.com/BrainBlend-AI/atomic-agents
-  - "autogen": https://github.com/microsoft/autogen/
-  - "langgraph": https://www.langchain.com/langgraph
-  - "crewai": https://www.crewai.com/
-  - "swarms": https://github.com/kyegomez/swarms
-
+    - "agenty": https://github.com/jonchun/agenty
+    - "atomic-agents": https://github.com/BrainBlend-AI/atomic-agents
+    - "autogen": https://github.com/microsoft/autogen/
+    - "langgraph": https://www.langchain.com/langgraph
+    - "crewai": https://www.crewai.com/
+    - "swarms": https://github.com/kyegomez/swarms
 ---
+
 # Why use an Agentic Framework?
 
 ## LLM's and Limitations
+
 Working directly with Large Language Models (LLMs) can feel like having a brilliant assistant who only responds when spoken to. They're great for answering direct questions but not ideal for handling complex, multi-step tasks.
 
-One major limitation most people run into immediately is lack of memory and context retention. LLMs don’t naturally remember past interactions, meaning you have to repeatedly provide context, which can be frustrating and inefficient. 
+One major limitation most people run into immediately is lack of memory and context retention. LLMs don’t naturally remember past interactions, meaning you have to repeatedly provide context, which can be frustrating and inefficient.
 
 Another common issue is lack of initiative. LLMs respond to prompts but don’t proactively take action or follow up on tasks unless explicitly told to. This makes them more like a search engine than an intelligent assistant that truly "gets things done."
 
@@ -27,38 +28,41 @@ They also lack built-in tooling and the ability to act. While they can generate 
 The possibilities are immense. If we could iron out these core limitations, we could take these systems from powerful but constrained, to truly transformative.
 
 ## What's an Agent?
+
 We've all been there. You're chatting with ChatGPT, and it seems to remember your entire conversation, almost magically tracking the context of your discussion until it suddenly doesn't know what you're talking about.
 
 Here's the catch -- under the hood, these models are actually severely limited. They literally don't naturally remember anything. All the model itself knows how to do is predict the next token (a rough proxy for the next word) in the conversation given the previous tokens. So how do they pull off that seamless conversation?
 
 This is where agents come into play. They are the secret sauce that turns a raw AI model into a smart, adaptive assistant. Think of an agent like a personal assistant wrapped around an LLM. It's not just about responding to questions; it's about understanding context, managing memory, and actually getting things done. These agents are like translators, interpreters, and problem-solvers all rolled into one.
 
-- **Conversation History:** This is a fundamental mechanism in agent systems where all messages exchanged between a user and an AI model are sequentially tracked. When a new message arrives, the agent adds it to the existing conversation log and then submits the *complete* history to the model for generating a contextually informed response. This is important! Every single time you send another message in a long conversation, the model is rereading your **entire** conversation! 
+-   **Conversation History:** This is a fundamental mechanism in agent systems where all messages exchanged between a user and an AI model are sequentially tracked. When a new message arrives, the agent adds it to the existing conversation log and then submits the _complete_ history to the model for generating a contextually informed response. This is important! Every single time you send another message in a long conversation, the model is rereading your **entire** conversation!
 
-- **Tool Integration:** Agents aren't just confined to generating text. They can connect to web searches, execute code, interact with APIs, and perform complex tasks. Imagine having an assistant that doesn't just talk about writing a script, but can actually write and run it for you.
+-   **Tool Integration:** Agents aren't just confined to generating text. They can connect to web searches, execute code, interact with APIs, and perform complex tasks. Imagine having an assistant that doesn't just talk about writing a script, but can actually write and run it for you.
 
-- **Proactive Problem Solving:** Instead of waiting for explicit instructions, advanced agents can break down complex tasks, identify necessary steps, and even adjust their approach if something doesn't work.
+-   **Proactive Problem Solving:** Instead of waiting for explicit instructions, advanced agents can break down complex tasks, identify necessary steps, and even adjust their approach if something doesn't work.
 
-- **Memory:** They can store and retrieve previous conversation details, context, and even learn from past interactions. It's like giving an agent a notebook and the ability to flip back through its pages. 
+-   **Memory:** They can store and retrieve previous conversation details, context, and even learn from past interactions. It's like giving an agent a notebook and the ability to flip back through its pages.
 
 The result? An AI that feels less like a fancy autocomplete and more like a genuine assistant -- one that understands your intent, remembers your context, and can actually help you accomplish real-world tasks. It's not just about answering questions or predicting the next output anymore. It's about creating an intelligent system that can reason, plan, and execute -- bringing us closer to the dream of a true AI companion.
 
 ## What Are Agentic Frameworks?
+
 Agentic frameworks (or Agent frameworks) are the structured systems and architectures that enable AI agents to operate intelligently, flexibly, and efficiently. These frameworks provide the necessary infrastructure for managing conversations, integrating tools, handling memory, and executing tasks autonomously. Think of them as the backbone that transforms a basic AI model into a capable, adaptive assistant.
 
 At their core, agentic frameworks define how an AI agent:
 
-- **Processes and Retains Context**: They implement mechanisms for tracking and managing conversation history, ensuring that the AI can recall relevant details from past interactions and maintain coherence across long discussions.
-- **Uses Tools and APIs**: These frameworks allow AI agents to interact with external systems, such as databases, web searches, and computational tools, to enhance their capabilities beyond text generation.
-- Plans and Executes Multi-Step Tasks: Instead of simply responding to isolated queries, agentic frameworks empower AI agents to break down complex tasks into manageable steps, prioritize actions, and adjust based on feedback.
-- **Implements Memory Mechanisms**: While raw AI models don't inherently "remember," agentic frameworks enable agents to store, retrieve, and leverage past interactions, making them more personalized and context-aware over time.
-- **Adapts and Improves**: Some advanced frameworks incorporate learning mechanisms, allowing agents to refine their problem-solving strategies and improve their effectiveness through repeated interactions.
-
+-   **Processes and Retains Context**: They implement mechanisms for tracking and managing conversation history, ensuring that the AI can recall relevant details from past interactions and maintain coherence across long discussions.
+-   **Uses Tools and APIs**: These frameworks allow AI agents to interact with external systems, such as databases, web searches, and computational tools, to enhance their capabilities beyond text generation.
+-   Plans and Executes Multi-Step Tasks: Instead of simply responding to isolated queries, agentic frameworks empower AI agents to break down complex tasks into manageable steps, prioritize actions, and adjust based on feedback.
+-   **Implements Memory Mechanisms**: While raw AI models don't inherently "remember," agentic frameworks enable agents to store, retrieve, and leverage past interactions, making them more personalized and context-aware over time.
+-   **Adapts and Improves**: Some advanced frameworks incorporate learning mechanisms, allowing agents to refine their problem-solving strategies and improve their effectiveness through repeated interactions.
 
 ## Technical Examples
+
 Let's do a simple example of how agentic frameworks represent a significant improvement over direct LLM interactions. I'm going to use examples with [agenty](https://github.com/jonchun/agenty), an open-source framework I am developing that aims to be developer-friendly.
 
 ### Conversation Management
+
 The examples I use here are not going to be fully runnable examples for the sake of brevity. We set a generic system prompt (a set of instructions the LLM should follow that the end-user doesn't see) to `You are a helpful assistant.`
 
 #### OpenAI API
@@ -67,7 +71,7 @@ Let's start with a simple greeting that includes my name.
 
 > Hello, I'm Jon. How are you?
 
-```py 
+```py
 response = openai.ChatCompletion.create(
     model="gpt-4o",
     messages=[
@@ -79,7 +83,7 @@ print(response['choices'][0]['message']['content'])
 
 # Example Output:
 #
-# Hello Jon! I'm just a computer program, so I don't have feelings, 
+# Hello Jon! I'm just a computer program, so I don't have feelings,
 # but I'm here to help you. How can I assist you today?
 ```
 
@@ -107,18 +111,19 @@ print(response2['choices'][0]['message']['content'])
 
 # Example Output:
 #
-# Hello Jon! I'm just a computer program, so I don't have feelings, 
+# Hello Jon! I'm just a computer program, so I don't have feelings,
 # but I'm here to help you. How can I assist you today?
 #
-# I'm sorry, but I don't have access to personal data,  
+# I'm sorry, but I don't have access to personal data,
 # so I can't tell you your name.
 ```
 
 1. Ask a new question to the same underlying model.
 
-Unfortunately, the LLM has no idea what my name is. I just provided it though... what's going on? I mentioned this earlier, but models have NO memory. Every single new message you send means you have to send the *entire* conversation history every time.
+Unfortunately, the LLM has no idea what my name is. I just provided it though... what's going on? I mentioned this earlier, but models have NO memory. Every single new message you send means you have to send the _entire_ conversation history every time.
 
 Below, we first capture the response to our first interaction and include it in our second as we ask our follow-up question.
+
 ```py hl_lines="8 15-16"
 response = openai.ChatCompletion.create(
     model="gpt-4o",
@@ -144,7 +149,7 @@ print(response2['choices'][0]['message']['content'])
 
 # Example Output:
 #
-# Hello Jon! I'm just a computer program, so I don't have feelings, 
+# Hello Jon! I'm just a computer program, so I don't have feelings,
 # but I'm here to help you. How can I assist you today?
 #
 # You mentioned that your name is Jon. How can I assist you further?
@@ -154,12 +159,12 @@ print(response2['choices'][0]['message']['content'])
 2. We insert the captured response into the conversation history
 3. Finally, we add the new question/message into the list.
 
-
 We did it! The model now "remembers" my name and answers successfully.
 
 ---
 
 #### Framework (agenty)
+
 Now let's examine what the above workflow looks like with the help of a framework.
 
 ```python
@@ -173,7 +178,7 @@ print(response2)
 
 # Example Output:
 #
-# Hello Jon! I'm just a computer program, so I don't have feelings, 
+# Hello Jon! I'm just a computer program, so I don't have feelings,
 # but I'm here to help you. How can I assist you today?
 #
 # You mentioned that your name is Jon. How can I assist you further?
@@ -184,22 +189,28 @@ print(response2)
 2. We just continue and talk to the agent without doing anything else!
 
 Behind the scenes, the framework handles all of the conversation history for you. It also comes with an additional bonus of being able to handle more than just OpenAI. I can switch to using another model as easily as
+
 ```python
-from pydantic_ai.models.anthropic import AnthropicModel
+from agenty.models import AnthropicModel
 agent = Agent(
     model=AnthropicModel("claude-3-5-sonnet-latest"),
     system_prompt="You are a helpful assistant.",
 )
 ```
+
 If you were to try and do this manually, you would need to rewrite all of your code to confirm to the [Anthropic API](https://docs.anthropic.com/en/api/getting-started)
 
 ---
+
 ### Tools
+
 #### OpenAI API
-Let's build a simple tool that retrieves the current weather using the `get_temperature` function. This can be done through [function calling](https://platform.openai.com/docs/guides/function-calling).  
+
+Let's build a simple tool that retrieves the current weather using the `get_temperature` function. This can be done through [function calling](https://platform.openai.com/docs/guides/function-calling).
 
 Here’s an example of how it works when making a request via the API:
-```python  hl_lines="13-17 29 41"
+
+```python hl_lines="13-17 29 41"
 
 def get_temperature() -> float:
     return 72.0
@@ -269,7 +280,9 @@ It's quite a long and convoluted process just to call a single tool. Imagine how
 ---
 
 #### Framework (agenty)
+
 Here is the same functionality reproduced with the agenty framework.
+
 ```python hl_lines="5 11"
 class WeatherAgent(Agent):
     model = "gpt-4o"
@@ -290,6 +303,7 @@ print(weather_agent.run("What is the weather like?")) # (2)!
 ---
 
 ## Why Agentic Frameworks?
+
 Agentic frameworks represent a significant architectural leap beyond raw LLM integration. While basic LLM calls serve well for text generation, agent frameworks provide the components for building complex AI systems through robust state management, memory persistence, and tool integration capabilities.
 
 From an engineering perspective, the frameworks abstract away much of the boilerplate required for a sophisticated AI. Rather than repeatedly implementing context management, tool integration, and error handling patterns, developers can leverage pre-built implementations and components. This dramatically reduces technical debt while improving system reliability.
@@ -301,13 +315,14 @@ These frameworks provide the architectural foundation necessary for the next gen
 ---
 
 ## What Framework is Best?
+
 I think "best" always depends on what exactly you're looking to achieve. However, here is a list of some of the more popular and/or promising projects.
 
-- [https://ai.pydantic.dev/](https://ai.pydantic.dev/)
-- [https://github.com/BrainBlend-AI/atomic-agents](https://github.com/BrainBlend-AI/atomic-agents)
-- [https://github.com/microsoft/autogen/](https://github.com/microsoft/autogen/)
-- [https://www.langchain.com/langgraph](https://www.langchain.com/langgraph)
-- [https://www.crewai.com/](https://www.crewai.com/)
-- [https://github.com/kyegomez/swarms](https://github.com/kyegomez/swarms)
+-   [https://ai.pydantic.dev/](https://ai.pydantic.dev/)
+-   [https://github.com/BrainBlend-AI/atomic-agents](https://github.com/BrainBlend-AI/atomic-agents)
+-   [https://github.com/microsoft/autogen/](https://github.com/microsoft/autogen/)
+-   [https://www.langchain.com/langgraph](https://www.langchain.com/langgraph)
+-   [https://www.crewai.com/](https://www.crewai.com/)
+-   [https://github.com/kyegomez/swarms](https://github.com/kyegomez/swarms)
 
 I am the author of agenty which was used in the examples above. You can find my project here: [agenty](https://github.com/jonchun/agenty)
