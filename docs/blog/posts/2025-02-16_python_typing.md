@@ -14,9 +14,9 @@ links:
 
 Python's flexibility is both a blessing and a curse. This simplicity and adaptability are exactly what drew many of us to the language in the first place. Then along came type hints in Python 3.5, and suddenly there was all this extra...stuff. Extra characters. Extra lines. Extra complexity. If you're like many developers starting out, your first reaction was probably something like "Why would I want to make my clean Python code more verbose?"
 
-I get it. Type hints can feel like unnecessary bureaucracy in a language famous for its simplicity. But here's the thing -- they're not just extra syntax. They're a powerful tool that can dramatically improve your code quality, catch bugs before they happen, and make your codebase significantly more maintainable.
+I get it. Type hints can feel like unnecessary bureaucracy in a language famous for its simplicity, but they're not just extra syntax. They're a powerful tool that can dramatically improve your code quality, catch bugs before they happen, and make your codebase significantly more maintainable.
 
-Let's explore why those extra characters are worth their weight in gold, and how embracing type hints can level up your Python development game - without sacrificing the flexibility you love.
+Let's explore why those extra characters are worth it and how embracing type hints can level up your Python development game without sacrificing the flexibility you love.
 
 ## What is Type Hinting?
 
