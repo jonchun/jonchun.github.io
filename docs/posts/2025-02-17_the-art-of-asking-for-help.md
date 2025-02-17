@@ -29,7 +29,7 @@ This statement often makes a great title for an email, support ticket, or servic
 
 ## Do Your Homework
 
-The most effective way to ask for assistance is to first make an effort to help yourself. Before seeking guidance, take a moment to assess the situation and explore possible solutions on your own.
+The most effective way to to get help is to first make an effort to help yourself. Before asking for help, take a moment to explore possible solutions on your own.
 
 Imagine you're riding in a car with a friend who is driving. They have a navigation app open, clearly displaying the route, yet they keep turning to you every 15 seconds to ask where they should go next. The information they need is already available to them... they just aren’t using it.
 
@@ -39,7 +39,7 @@ By showing that you’ve made an effort before asking for help, you demonstrate 
 
 ## Provide Context
 
-When asking for help, context is key. No one can read your mind, so be sure to include relevant details about your problem. Organize and format your information clearly. No one will sift through thousands of lines of log files for you. Do your best to include only the most relevant details, and if you're unsure, you can always add extra information in a follow-up message or a separate section at the end.
+When asking for help, context is key. No one can read your mind, so be sure to include relevant details about your problem. Organize and format your information clearly. I'll be honest... no one (myself included) has the patience to sift through thousands of lines of log files. It's overwhelming and, frankly, a bit frustrating when someone dumps that in your lap. Do your best to include only the most relevant details, and if you're unsure, you can always add extra information in a follow-up message or a separate section at the end.
 
 Include information such as:
 
@@ -88,7 +88,7 @@ Take the time to properly format your request for help. **NOBODY** wants to read
 
 ## Be Patient and Professional
 
-Would **you** want to help someone who is being rude? Whether you're asking for help online, at work, or from friends, always approach the situation with politeness and respect. Keep in mind that you're asking someone to take time out of their day to assist you because you weren't able to resolve the issue on your own.
+I’ll admit, when your app breaks for the tenth time this month, it’s tempting to send an angry email with the subject: "URGENT - APP BROKE AGAIN." That said, would **you** want to help someone who is being rude? Whether you're asking for help online, at work, or from friends, always approach the situation with politeness and respect. Keep in mind that you're asking someone to take time out of their day to assist you because you weren't able to resolve the issue on your own.
 
 If you do end up finding the solution yourself, it's common courtesy to share it with others. If you end up receiving assistance, be sure to pay it forward by helping others in the future!
 

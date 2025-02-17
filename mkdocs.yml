@@ -43,9 +43,9 @@ plugins:
 - blog:
     blog_dir: .
 - rss:
-    match_path: blog/posts/.* 
+    match_path: posts/.* 
     date_from_meta:
-      created: date
+      as_creation: date.created
     categories:
       - categories
       - tags
