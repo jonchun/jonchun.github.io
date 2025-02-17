@@ -9,8 +9,7 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
 nav:
-  - Blog:
-    - blog/index.md
+  - index.md
 
 # Theme configuration
 theme:
@@ -41,7 +40,8 @@ theme:
 # Plugin configuration
 plugins:
 - search
-- blog
+- blog:
+    blog_dir: .
 - rss:
     match_path: blog/posts/.* 
     date_from_meta:
