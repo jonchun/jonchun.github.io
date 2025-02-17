@@ -55,3 +55,8 @@ markdown_extensions:
 - admonition
 - pymdownx.details
 - pymdownx.superfences
+
+extra:
+  analytics:
+    provider: google
+    property: G-C4FTHDBGRX
