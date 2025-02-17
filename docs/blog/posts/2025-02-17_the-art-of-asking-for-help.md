@@ -68,8 +68,9 @@ Note how the request for help isn't even very long. It simply includes the follo
 -   When the issue started
 -   Troubleshooting steps taken
 -   Environment details such as OS and Browser
+-   Screenshot of problem
 
-This initial level of detail allows others to jump in and help without having to ask basic questions, saving time for everyone involved. It also demonstrates that you've put thought into the problem and aren't just looking for someone to do the work for you.
+This initial level of detail allows someone to jump in and offer help without having to ask basic questions, saving time for everyone involved. It also demonstrates that you've put thought into the problem and aren't just looking for someone to do the work for you.
 
 !!! Note
 
