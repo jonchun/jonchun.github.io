@@ -6,6 +6,7 @@ links:
     - "Python Docs | typing": https://docs.python.org/3/library/typing.html
     - "PEP 585": https://peps.python.org/pep-0585/
     - "Pydantic": https://github.com/pydantic/pydantic
+    - "__future__": https://docs.python.org/3/library/__future__.html
 ---
 
 # To Type or Not to Type?
@@ -192,8 +193,6 @@ This pattern is particularly useful when:
 When working with collections, you start to see the real power in type hints. They allow you to specify not just the container type, but also what goes inside it:
 
 ```python
-from typing import Optional
-
 def process_orders(orders: list[dict[str, float]]) -> float:
     return sum(order['amount'] for order in orders)
 
@@ -201,7 +200,7 @@ def get_user_stats(user_id: int) -> tuple[str, int, float]:
     # Returns (username, total_orders, average_order_value)
     return ('user123', 50, 29.99)
 
-def find_user(email: str) -> Optional[dict[str, any]]:
+def find_user(email: str) -> dict[str, any] | None:
     # Returns None if user not found
     return database.get_user(email)
 ```
@@ -244,6 +243,14 @@ def store_metadata(key: str, value: Any) -> None:
 ```
 
 `Any` should be used sparingly -- it's essentially telling type checkers "don't check this at all." Think of `Any` as an escape hatch when you truly need complete flexibility.
+
+### Python 3.9-
+
+If you're on an older version of Python, you can enable 3.10+ style annotations with the following statement
+
+```py
+from __future__ import annotations
+```
 
 ## Advanced Uses
 
