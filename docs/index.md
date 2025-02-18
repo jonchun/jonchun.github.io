@@ -1,4 +1,4 @@
-I'm Jonathan Chun, a technology leader driven by the mission of empowering development teams to build better software. Here, I share insights from my journey of leading technical initiatives and transforming developer experiences.
+I'm Jonathan Chun, a technology enthusiast driven by the mission of empowering development teams to build better software. Here, I share insights from my journey of leading technical initiatives and transforming developer experiences.
 
 ## My Philosophy
 
